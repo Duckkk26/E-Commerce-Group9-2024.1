@@ -11,11 +11,11 @@ function LoginSignup() {
     password: "",
     email: ""
   });
-
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value});
   };
-
+  
+  // Hàm để xử lý đăng nhập
   const login = async () => {
     let resData;
     await axios.post('http://localhost:4000/user/login', formData, {
@@ -25,7 +25,7 @@ function LoginSignup() {
       }
     })
       .then((res) => resData = res.data);
-
+    // Nếu đăng nhập thành công, chuyển hướng dựa trên vai trò của người dùng
     if (resData.success) {
       if (resData.role === "admin") {
         // Tạo URL mới bằng cách thêm auth-token là một tham số
@@ -40,7 +40,7 @@ function LoginSignup() {
       alert(resData.errors);
     }
   };
-
+  // Hàm để xử lý đăng ký
   const signup = async () => {
     let resData;
     await axios.post('http://localhost:4000/user/signup', formData, {
