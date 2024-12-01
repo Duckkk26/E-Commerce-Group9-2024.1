@@ -5,6 +5,7 @@ import "./CSS/Home.css";
 import NewCollections from "../Component/NewCollections/NewCollections";
 import Popular from "../Component/Popular/Popular";
 import NewsLetter from "../Component/NewsLetter/NewsLetter";
+import MenuBottomTabs from "../Components/MenuBottomTabs/MenuBottomTabs";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <Popular category={"PersonalComputer"} />
       <Popular category={"Tablet"} />
       <NewsLetter />
+      <MenuBottomTabs active={"Home"} />
     </div>
   );
 }
