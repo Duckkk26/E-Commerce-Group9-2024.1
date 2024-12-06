@@ -5,6 +5,7 @@ import Breadcrumbs from "../Components/Breadcrumbs/Breadcrumbs";
 
 import "./CSS/Product.css";
 import MenuBottomTabs from "../Components/MenuBottomTabs/MenuBottomTabs";
+import ProductDisplay from "../Component/ProductDisplay/ProductDisplay";
 
 function Product() {
   const { allProducts } = useContext(ShopContext);
@@ -16,6 +17,7 @@ function Product() {
       {product ? (
         <>
           <Breadcrumbs product={product} category={product.category} />
+          <ProductDisplay product={product} />
         </>
       ) : (
         <></>
