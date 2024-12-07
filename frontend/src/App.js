@@ -5,6 +5,7 @@ import Header from "./Component/Header/Header";
 import "./App.css";
 import Home from "./Pages/Home";
 import ShopCategory from "./Pages/ShopCategory";
+import Product from "./Pages/Product";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             path="/personalcomputer"
             element={<ShopCategory category="PersonalComputer" />}
           />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
