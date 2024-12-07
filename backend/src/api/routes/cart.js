@@ -7,7 +7,7 @@ import ProductModel from '../../db/model/Product.js'
 import CartModel from '../../db/model/Cart.js'
 
 // Import middlewares
-import { fetchUser } from '../middleware/fetchUserFromToken.js';
+import { fetchUser } from '../middlewares/fetchUserFromToken.js';
 
 const router = express.Router();
 

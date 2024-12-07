@@ -4,9 +4,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
-import { route } from "./api/routes/index.js";
 import connection from "./db/connect.js";
 import { fileURLToPath } from "url";
+import { route } from "./api/routes/index.js";
 
 const app = express();
 

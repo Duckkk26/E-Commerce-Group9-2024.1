@@ -1,8 +1,8 @@
 import express from "express";
 import OrderModel from "../../db/model/Order.js";
-import { fetchUser } from "../middleware/fetchUserFromToken.js";
 import UserModel from "../../db/model/User.js";
 import ProductModel from "../../db/model/Product.js";
+import { fetchUser } from "../middlewares/fetchUserFromToken.js";
 
 const router = express.Router();
 
