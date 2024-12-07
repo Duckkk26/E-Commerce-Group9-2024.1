@@ -6,11 +6,13 @@ import "./App.css";
 import Home from "./Pages/Home";
 import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
+import ScrollToTop from "./Component/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
