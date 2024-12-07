@@ -20,7 +20,9 @@ function App() {
               element={<ShopCategory category="Mobile" />}
             />
           </Route>
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
