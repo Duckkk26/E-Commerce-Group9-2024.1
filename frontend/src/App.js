@@ -21,6 +21,10 @@ function App() {
           </Route>
           <Route path="/tablet" element={<ShopCategory category="Tablet" />} />
           <Route path="/laptop" element={<ShopCategory category="Laptop" />} />
+          <Route
+            path="/personalcomputer"
+            element={<ShopCategory category="PersonalComputer" />}
+          />
         </Routes>
       </BrowserRouter>
     </>
