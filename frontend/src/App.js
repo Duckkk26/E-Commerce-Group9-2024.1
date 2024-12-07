@@ -19,6 +19,8 @@ function App() {
               element={<ShopCategory category="Mobile" />}
             />
           </Route>
+          <Route path="/tablet" element={<ShopCategory category="Tablet" />} />
+          <Route path="/laptop" element={<ShopCategory category="Laptop" />} />
         </Routes>
       </BrowserRouter>
     </>
