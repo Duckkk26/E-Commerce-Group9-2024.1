@@ -4,12 +4,18 @@
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",    
+    "build": "babel src -d dist --extensions \".js\"",
+    "start:prod": "node dist/server.js"
+
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.26.0",
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
