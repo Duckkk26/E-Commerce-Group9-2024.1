@@ -52,7 +52,7 @@ app.post("/upload", upload.any(), (req, res) => {
   res.status(200).json({
     success: 1,
     image_urls: fileNames.map(
-      (filename) => `http://localhost:${port}/images/${filename}`
+      (filename) => `https://e-commerce-zzfe.onrender.com/images/${filename}`
     ),
   });
 });
@@ -62,7 +62,7 @@ connection
     app.listen(port, (error) => {
       if (!error) {
         console.log(
-          `Server is running on port ${port}. http://localhost:${port}`
+          `Server is running on https://e-commerce-zzfe.onrender.com`
         );
       } else {
         console.log("Error" + error);

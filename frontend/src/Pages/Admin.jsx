@@ -4,7 +4,7 @@ import Navbar from "../Component/admin/Navbar/Navbar";
 import Sidebar from "../Component/admin/Sidebar/Sidebar";
 import AddAndEditProduct from "../Component/admin/AddAndEditProduct/AddAndEditProduct";
 import ListProduct from "../Component/admin/ListProduct/ListProduct";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function Admin() {
   return (
@@ -13,6 +13,7 @@ function Admin() {
       <div className="admin">
         <Sidebar />
         <Routes>
+          <Route path="/" element={<Navigate to="/admin/listProduct" />} />
           <Route
             path="/addProduct"
             element={<AddAndEditProduct mode={"add"} />}

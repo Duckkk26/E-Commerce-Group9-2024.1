@@ -1,11 +1,11 @@
 import React from "react";
-import Banner from "../Components/Banner/Banner";
+import Banner from "../Component/Banner/Banner";
 
 import "./CSS/Home.css";
 import NewCollections from "../Component/NewCollections/NewCollections";
 import Popular from "../Component/Popular/Popular";
 import NewsLetter from "../Component/NewsLetter/NewsLetter";
-import MenuBottomTabs from "../Components/MenuBottomTabs/MenuBottomTabs";
+import MenuBottomTabs from "../Component/MenuBottomTabs/MenuBottomTabs";
 
 function Home() {
   return (

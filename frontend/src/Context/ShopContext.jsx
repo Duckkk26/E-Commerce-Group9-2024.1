@@ -9,11 +9,11 @@ function ShopContextProvider(props) {
     const [orderProducts, setOrderProducts] = useState([]);
 
     const fetchData = async () => {
-        await axios.get('http://localhost:4000/product/all')
+        await axios.get('https://e-commerce-zzfe.onrender.com/product/all')
             .then((res) => setAllProducts(res.data));
 
         if (localStorage.getItem('auth-token')) {
-            axios.get('http://localhost:4000/cart/get', {
+            axios.get('https://e-commerce-zzfe.onrender.com/cart/get', {
                 headers: {
                     Accept: 'application/form-data',
                     'auth-token': `${localStorage.getItem('auth-token')}`,
@@ -66,7 +66,7 @@ function ShopContextProvider(props) {
         setCartItems(newCartItems)
 
         if (localStorage.getItem('auth-token')) {
-            axios.post('http://localhost:4000/cart/addToCart', {
+            axios.post('https://e-commerce-zzfe.onrender.com/cart/addToCart', {
                 "productId": productId,
                 "color": color,
                 "image": image,
@@ -109,7 +109,7 @@ function ShopContextProvider(props) {
         setCartItems(newCartItems);
 
         if (localStorage.getItem('auth-token')) {
-            axios.post('http://localhost:4000/cart/removeFromCart', {
+            axios.post('https://e-commerce-zzfe.onrender.com/cart/removeFromCart', {
                 "productId": productId,
                 "color": color
             }, {
@@ -140,7 +140,7 @@ function ShopContextProvider(props) {
         setCartItems(newCartItems);
 
         if (localStorage.getItem('auth-token')) {
-            axios.delete('http://localhost:4000/cart/deleteFromCart', {
+            axios.delete('https://e-commerce-zzfe.onrender.com/cart/deleteFromCart', {
                 headers: {
                     Accept: 'application/form-data',
                     'auth-token': `${localStorage.getItem('auth-token')}`,
@@ -157,6 +157,8 @@ function ShopContextProvider(props) {
     
     const getTotalItems = () => {
         let totalItems = 0;
+        console.log(cartItems);
+        
         cartItems.forEach((product) => {
             totalItems += Number(product.quantity);
         })

@@ -100,7 +100,7 @@ function Navbar() {
                         <br />
                         hàng
                     </p>
-                    <span id="items-in-cart">{getTotalItems()}</span>
+                    <span id="items-in-cart">{getTotalItems() ?? 0}</span>
                 </div>
             </Link>
             {

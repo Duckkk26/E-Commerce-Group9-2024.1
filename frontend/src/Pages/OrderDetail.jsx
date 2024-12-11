@@ -5,8 +5,8 @@ import axios from 'axios'
 import moment from 'moment'
 
 import './CSS/OrderDetail.css'
-import paymentIcon from '../Components/Assets/payment.png'
-import customerIcon from '../Components/Assets/customer_icon.png'
+import paymentIcon from '../Component/Assets/payment.png'
+import customerIcon from '../Component/Assets/customer_icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -18,7 +18,7 @@ function OrderDetail() {
   const [isProductList, setIsProductList] = useState(false);
 
   const fetchOrder = async () => {
-    const response = await axios.get(`http://localhost:4000/order/get/${orderId}`, {
+    const response = await axios.get(`https://e-commerce-zzfe.onrender.com/order/get/${orderId}`, {
       headers: {
         'auth-token': `${localStorage.getItem('auth-token')}`
       }

@@ -12,13 +12,13 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar">
-      <img src={navLogo} alt="" className="nav-logo" />
+    <div className="adminnavbar">
+      <img src={navLogo} alt="" className="adminnav-logo" />
       <img
         onClick={() => logout()}
         src={navProfile}
         alt=""
-        className="nav-profile"
+        className="adminnav-profile"
       />
     </div>
   );

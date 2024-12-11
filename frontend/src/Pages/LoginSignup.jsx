@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import './CSS/LoginSignup.css'
-import MenuBottomTabs from '../Components/MenuBottomTabs/MenuBottomTabs';
+import MenuBottomTabs from '../Component/MenuBottomTabs/MenuBottomTabs';
 import axios from 'axios';
 
 function LoginSignup() {
@@ -18,7 +18,7 @@ function LoginSignup() {
   // Hàm để xử lý đăng nhập
   const login = async () => {
     let resData;
-    await axios.post('http://localhost:4000/user/login', formData, {
+    await axios.post('https://e-commerce-zzfe.onrender.com/user/login', formData, {
       headers: {
         Accept: 'application/form-data',
         'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ function LoginSignup() {
   // Hàm để xử lý đăng ký
   const signup = async () => {
     let resData;
-    await axios.post('http://localhost:4000/user/signup', formData, {
+    await axios.post('https://e-commerce-zzfe.onrender.com/user/signup', formData, {
       headers: {
         Accept: 'application/form-data',
         'Content-type': 'application/json'

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../Context/ShopContext";
 import { useParams } from "react-router-dom";
-import Breadcrumbs from "../Components/Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "../Component/Breadcrumbs/Breadcrumbs";
 
 import "./CSS/Product.css";
-import MenuBottomTabs from "../Components/MenuBottomTabs/MenuBottomTabs";
+import MenuBottomTabs from "../Component/MenuBottomTabs/MenuBottomTabs";
 import ProductDisplay from "../Component/ProductDisplay/ProductDisplay";
-import DescriptionBox from "../Component/DescriptionBox";
+import DescriptionBox from "../Component/DescriptionBox/DescriptionBox";
 import RelatedProducts from "../Component/RelatedProducts/RelatedProducts";
 function Product() {
   const { allProducts } = useContext(ShopContext);

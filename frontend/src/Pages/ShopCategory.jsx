@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { ShopContext } from "../Context/ShopContext";
-import Breadcrumbs from "../Components/Breadcrumbs/Breadcrumbs";
-import Item from "../Components/Item/Item";
-import MenuBottomTabs from "../Components/MenuBottomTabs/MenuBottomTabs";
+import Breadcrumbs from "../Component/Breadcrumbs/Breadcrumbs";
+import Item from "../Component/Item/Item";
+import MenuBottomTabs from "../Component/MenuBottomTabs/MenuBottomTabs";
 
 import "./CSS/ShopCategory.css";
 
-import dropdown_icon from "../Components/Assets/dropdown_icon.png";
+import dropdown_icon from "../Component/Assets/dropdown_icon.png";
 import axios from "axios";
 
 function ShopCategory(props) {
@@ -35,7 +35,7 @@ function ShopCategory(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/brand/${props.category}`)
+      .get(`https://e-commerce-zzfe.onrender.com/brand/${props.category}`)
       .then((res) => setBrandList(res.data));
   }, [props.category]);
 

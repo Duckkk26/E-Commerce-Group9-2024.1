@@ -1,6 +1,6 @@
 import React from 'react'
-import CartItems from '../Components/CartItems/CartItems'
-import MenuBottomTabs from '../Components/MenuBottomTabs/MenuBottomTabs'
+import CartItems from '../Component/CartItems/CartItems'
+import MenuBottomTabs from '../Component/MenuBottomTabs/MenuBottomTabs'
 
 import './CSS/Cart.css'
 

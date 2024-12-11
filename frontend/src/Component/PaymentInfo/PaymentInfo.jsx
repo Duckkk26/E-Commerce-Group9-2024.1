@@ -25,7 +25,7 @@ function PaymentInfo({ order, handleChange }) {
   const [isWardDropdown, setIsWardDropdown] = useState(false)
 
   useEffect(() => {
-    axios.get('http://localhost:4000/address/province')
+    axios.get('https://e-commerce-zzfe.onrender.com/address/province')
       .then(res => {
         setProvinceList(res.data)
       })
@@ -54,7 +54,7 @@ function PaymentInfo({ order, handleChange }) {
     if (!provinceID || !address.province) {
       setDistrictList([]);
     } else {
-      axios.get(`http://localhost:4000/address/district/${provinceID}`)
+      axios.get(`https://e-commerce-zzfe.onrender.com/address/district/${provinceID}`)
         .then(res => {
           setDistrictList(res.data)
         })
@@ -65,7 +65,7 @@ function PaymentInfo({ order, handleChange }) {
     if (!districtID || !address.district) {
       setWardList([]);
     } else {
-      axios.get(`http://localhost:4000/address/ward/${districtID}`)
+      axios.get(`https://e-commerce-zzfe.onrender.com/address/ward/${districtID}`)
         .then(res => {
           setWardList(res.data)
         })

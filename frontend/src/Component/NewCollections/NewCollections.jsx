@@ -18,7 +18,7 @@ function NewCollections() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/product/new")
+      .get("https://e-commerce-zzfe.onrender.com/product/new")
       .then((res) => setNewCollections(res.data));
   }, []);
 

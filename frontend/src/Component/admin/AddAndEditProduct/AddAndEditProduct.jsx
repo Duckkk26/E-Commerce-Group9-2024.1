@@ -41,7 +41,7 @@ function AddAndEditProduct({ mode }) {
     let resData;
 
     if (productId) {
-      await fetch(`http://localhost:4000/product/get/${productId}`)
+      await fetch(`https://e-commerce-zzfe.onrender.com/product/get/${productId}`)
         .then((res) => res.json())
         .then((data) => (resData = data));
 
@@ -119,7 +119,7 @@ function AddAndEditProduct({ mode }) {
       formData.append("color", image);
     });
 
-    await fetch("http://localhost:4000/upload", {
+    await fetch("https://e-commerce-zzfe.onrender.com/upload", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -144,7 +144,7 @@ function AddAndEditProduct({ mode }) {
       formData.append("product", image);
     });
 
-    await fetch("http://localhost:4000/upload", {
+    await fetch("https://e-commerce-zzfe.onrender.com/upload", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -163,7 +163,7 @@ function AddAndEditProduct({ mode }) {
       product.old_price = minOldPrice;
       product.colors = colorsData;
       product.total_quantity = totalQuantity;
-      await fetch("http://localhost:4000/product/add", {
+      await fetch("https://e-commerce-zzfe.onrender.com/product/add", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -207,7 +207,7 @@ function AddAndEditProduct({ mode }) {
       formData.append("color", image);
     });
 
-    await fetch("http://localhost:4000/upload", {
+    await fetch("https://e-commerce-zzfe.onrender.com/upload", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -239,7 +239,7 @@ function AddAndEditProduct({ mode }) {
       formData.append("product", image);
     });
 
-    await fetch("http://localhost:4000/upload", {
+    await fetch("https://e-commerce-zzfe.onrender.com/upload", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -258,7 +258,7 @@ function AddAndEditProduct({ mode }) {
       product.old_price = minOldPrice;
       product.colors = colorsData;
       product.total_quantity = totalQuantity;
-      await fetch("http://localhost:4000/product/update", {
+      await fetch("https://e-commerce-zzfe.onrender.com/product/update", {
         method: "PATCH",
         headers: {
           Accept: "application/json",

@@ -4,11 +4,11 @@ import { ShopContext } from '../Context/ShopContext'
 
 import './CSS/Pay.css'
 
-import PaymentInfo from '../Components/PaymentInfo/PaymentInfo';
-import Payment from '../Components/Payment/Payment';
-import Checkout from '../Components/Checkout/Checkout';
-import PayNav from '../Components/PayNav/PayNav';
-import PayBottomBar from '../Components/PayBottomBar/PayBottomBar';
+import PaymentInfo from '../Component/PaymentInfo/PaymentInfo';
+import Payment from '../Component/Payment/Payment';
+import Checkout from '../Component/Checkout/Checkout';
+import PayNav from '../Component/PayNav/PayNav';
+import PayBottomBar from '../Component/PayBottomBar/PayBottomBar';
 
 function Pay() {
   const { orderProducts } = useContext(ShopContext);

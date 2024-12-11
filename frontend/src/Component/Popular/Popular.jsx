@@ -20,7 +20,7 @@ function Popular({ category }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/product/popular/${category}`)
+      .get(`https://e-commerce-zzfe.onrender.com/product/popular/${category}`)
       .then((res) => setPopularProducts(res.data));
 
     switch (category) {
