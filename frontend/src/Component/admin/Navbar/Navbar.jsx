@@ -8,7 +8,7 @@ import navProfile from "../../Assets/nav-profile.svg";
 function Navbar() {
   const logout = () => {
     localStorage.removeItem("auth-token");
-    window.location.replace("http://localhost:3000");
+    window.location.replace("https://e-commerce-two-sandy-96.vercel.app/");
   };
 
   return (
