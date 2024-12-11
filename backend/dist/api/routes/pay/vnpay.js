@@ -12,7 +12,7 @@ var router = express.Router();
 var vnp_TmnCode = "N503GXRD";
 var vnp_HashSecret = "Q4KHLNJCZC3P7GS3YQH7POP2RFUQ9JZS";
 var vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-var vnp_ReturnUrl = "https://e-commerce-zzfe.onrender.com/pay/vnpay/vnpay_return";
+var vnp_ReturnUrl = "https://e-commerce-group9-2024-1.onrender.com/pay/vnpay/vnpay_return";
 function sortObject(obj) {
   var sorted = {};
   var str = [];
@@ -212,7 +212,7 @@ router.get("/vnpay_return", /*#__PURE__*/function () {
           vnp_Params = req.query;
           _context2.prev = 1;
           _context2.next = 4;
-          return axios.get("https://e-commerce-zzfe.onrender.com/pay/vnpay/vnpay_ipn?".concat(querystring.stringify(vnp_Params, {
+          return axios.get("https://e-commerce-group9-2024-1.onrender.com/pay/vnpay/vnpay_ipn?".concat(querystring.stringify(vnp_Params, {
             encode: false
           })));
         case 4:

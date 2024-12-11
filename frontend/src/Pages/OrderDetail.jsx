@@ -18,7 +18,7 @@ function OrderDetail() {
   const [isProductList, setIsProductList] = useState(false);
 
   const fetchOrder = async () => {
-    const response = await axios.get(`https://e-commerce-zzfe.onrender.com/order/get/${orderId}`, {
+    const response = await axios.get(`https://e-commerce-group9-2024-1.onrender.com/order/get/${orderId}`, {
       headers: {
         'auth-token': `${localStorage.getItem('auth-token')}`
       }
@@ -83,7 +83,7 @@ function OrderDetail() {
                             <div key={index} className="block-order-item detail-page">
                               <div className="order-item">
                                 <div className="order-item__img">
-                                  <img src={product.image} alt="product" loading='lazy' />
+                                  <img src={product.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')} alt="product" loading='lazy' />
                                 </div>
                                 <div className="order-item__info">
                                   <Link

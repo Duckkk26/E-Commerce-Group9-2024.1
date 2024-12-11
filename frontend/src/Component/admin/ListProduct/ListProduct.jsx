@@ -11,7 +11,7 @@ function ListProduct() {
   const [allProducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch("https://e-commerce-zzfe.onrender.com/product/all")
+    await fetch("https://e-commerce-group9-2024-1.onrender.com/product/all")
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -31,7 +31,7 @@ function ListProduct() {
   };
 
   const removeProduct = async (id) => {
-    await fetch("https://e-commerce-zzfe.onrender.com/product/remove", {
+    await fetch("https://e-commerce-group9-2024-1.onrender.com/product/remove", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -81,13 +81,13 @@ function ListProduct() {
               <div className="listproduct-format-main listproduct-format">
                 {product.images ? (
                   <img
-                    src={product.images[0]}
+                    src={product.images[0].replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')}
                     alt=""
                     className="listproduct-product-icon"
                   />
                 ) : (
                   <img
-                    src={product.image}
+                    src={product.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')}
                     alt=""
                     className="listproduct-product-icon"
                   />

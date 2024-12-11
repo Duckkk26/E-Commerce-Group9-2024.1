@@ -76,7 +76,7 @@ function CartItems() {
                                 onChange={() => handleProduct(product)} 
                             />
                             <label className='custom-control-label' htmlFor={`__checkbox__${index}`}>
-                                <img src={product.image} alt={product.name} className='cartitem-product-icon' />
+                                <img src={product.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')} alt={product.name} className='cartitem-product-icon' />
                             </label>
                             <p>{product.name} - {product.color}</p>
                             <div><p>{formatPrice(product.new_price)}</p></div>
@@ -94,7 +94,7 @@ function CartItems() {
                                         product.productId,
                                         product.name, 
                                         product.color,
-                                        product.image,
+                                        product.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com'),
                                         product.new_price,
                                         product.pld_price
                                     )}

@@ -9,11 +9,11 @@ function ShopContextProvider(props) {
     const [orderProducts, setOrderProducts] = useState([]);
 
     const fetchData = async () => {
-        await axios.get('https://e-commerce-zzfe.onrender.com/product/all')
+        await axios.get('https://e-commerce-group9-2024-1.onrender.com/product/all')
             .then((res) => setAllProducts(res.data));
 
         if (localStorage.getItem('auth-token')) {
-            axios.get('https://e-commerce-zzfe.onrender.com/cart/get', {
+            axios.get('https://e-commerce-group9-2024-1.onrender.com/cart/get', {
                 headers: {
                     Accept: 'application/form-data',
                     'auth-token': `${localStorage.getItem('auth-token')}`,
@@ -66,7 +66,7 @@ function ShopContextProvider(props) {
         setCartItems(newCartItems)
 
         if (localStorage.getItem('auth-token')) {
-            axios.post('https://e-commerce-zzfe.onrender.com/cart/addToCart', {
+            axios.post('https://e-commerce-group9-2024-1.onrender.com/cart/addToCart', {
                 "productId": productId,
                 "color": color,
                 "image": image,
@@ -109,7 +109,7 @@ function ShopContextProvider(props) {
         setCartItems(newCartItems);
 
         if (localStorage.getItem('auth-token')) {
-            axios.post('https://e-commerce-zzfe.onrender.com/cart/removeFromCart', {
+            axios.post('https://e-commerce-group9-2024-1.onrender.com/cart/removeFromCart', {
                 "productId": productId,
                 "color": color
             }, {
@@ -140,7 +140,7 @@ function ShopContextProvider(props) {
         setCartItems(newCartItems);
 
         if (localStorage.getItem('auth-token')) {
-            axios.delete('https://e-commerce-zzfe.onrender.com/cart/deleteFromCart', {
+            axios.delete('https://e-commerce-group9-2024-1.onrender.com/cart/deleteFromCart', {
                 headers: {
                     Accept: 'application/form-data',
                     'auth-token': `${localStorage.getItem('auth-token')}`,

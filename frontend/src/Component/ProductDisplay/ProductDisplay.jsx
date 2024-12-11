@@ -44,14 +44,14 @@ function ProductDisplay(props) {
                 {product.images.map((image, index) => {
                   return (
                     <div key={index} className="swiper-slide gallery-img">
-                      <img src={image} alt="" />
+                      <img src={image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')} alt="" />
                     </div>
                   );
                 })}
                 {product.colors.map((item, index) => {
                   return (
                     <div key={index} className="swiper-slide gallery-img">
-                      <img src={item.image} alt="" />
+                      <img src={item.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')} alt="" />
                     </div>
                   );
                 })}

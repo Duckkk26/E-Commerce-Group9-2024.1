@@ -11,7 +11,7 @@ const vnp_TmnCode = "N503GXRD";
 const vnp_HashSecret = "Q4KHLNJCZC3P7GS3YQH7POP2RFUQ9JZS";
 const vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 const vnp_ReturnUrl =
-  "https://e-commerce-zzfe.onrender.com/pay/vnpay/vnpay_return";
+  "https://e-commerce-group9-2024-1.onrender.com/pay/vnpay/vnpay_return";
 
 function sortObject(obj) {
   var sorted = {};
@@ -156,7 +156,7 @@ router.get("/vnpay_return", async (req, res, next) => {
 
   try {
     const response = await axios.get(
-      `https://e-commerce-zzfe.onrender.com/pay/vnpay/vnpay_ipn?${querystring.stringify(
+      `https://e-commerce-group9-2024-1.onrender.com/pay/vnpay/vnpay_ipn?${querystring.stringify(
         vnp_Params,
         { encode: false }
       )}`

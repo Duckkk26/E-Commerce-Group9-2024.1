@@ -30,7 +30,7 @@ function ModalViewList({ products, closeViewList }) {
                   products.map((product, index) => {
                     return (
                       <div key={index} className="product-item">
-                        <img src={product.image} alt={product.name} loading='lazy' className='product-img' />
+                        <img src={product.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')} alt={product.name} loading='lazy' className='product-img' />
                         <div className="product-info">
                           <p>{product.name} - {product.color}</p>
                           <div className="product-price-qty">

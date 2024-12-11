@@ -51,14 +51,14 @@ app.post("/upload", upload.any(), function (req, res) {
   res.status(200).json({
     success: 1,
     image_urls: fileNames.map(function (filename) {
-      return "https://e-commerce-zzfe.onrender.com/images/".concat(filename);
+      return "https://e-commerce-group9-2024-1.onrender.com/images/".concat(filename);
     })
   });
 });
 connection.then(function () {
   app.listen(port, function (error) {
     if (!error) {
-      console.log("Server is running on https://e-commerce-zzfe.onrender.com");
+      console.log("Server is running on https://e-commerce-group9-2024-1.onrender.com");
     } else {
       console.log("Error" + error);
     }

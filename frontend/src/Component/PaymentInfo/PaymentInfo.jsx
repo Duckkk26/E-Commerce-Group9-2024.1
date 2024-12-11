@@ -25,7 +25,7 @@ function PaymentInfo({ order, handleChange }) {
   const [isWardDropdown, setIsWardDropdown] = useState(false)
 
   useEffect(() => {
-    axios.get('https://e-commerce-zzfe.onrender.com/address/province')
+    axios.get('https://e-commerce-group9-2024-1.onrender.com/address/province')
       .then(res => {
         setProvinceList(res.data)
       })
@@ -54,7 +54,7 @@ function PaymentInfo({ order, handleChange }) {
     if (!provinceID || !address.province) {
       setDistrictList([]);
     } else {
-      axios.get(`https://e-commerce-zzfe.onrender.com/address/district/${provinceID}`)
+      axios.get(`https://e-commerce-group9-2024-1.onrender.com/address/district/${provinceID}`)
         .then(res => {
           setDistrictList(res.data)
         })
@@ -65,7 +65,7 @@ function PaymentInfo({ order, handleChange }) {
     if (!districtID || !address.district) {
       setWardList([]);
     } else {
-      axios.get(`https://e-commerce-zzfe.onrender.com/address/ward/${districtID}`)
+      axios.get(`https://e-commerce-group9-2024-1.onrender.com/address/ward/${districtID}`)
         .then(res => {
           setWardList(res.data)
         })
@@ -106,7 +106,7 @@ function PaymentInfo({ order, handleChange }) {
               if (index !== 0 && isViewList === false) return null
               return (
                 <div key={index} className="order-item order-item--show">
-                  <img src={product.image} alt={product.name} loading='lazy' className='item__img' />
+                  <img src={product.image.replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')} alt={product.name} loading='lazy' className='item__img' />
                   <div className="item__info">
                     <p className="item__name">{product.name} - {product.color}</p>
                     <div className="item__price">

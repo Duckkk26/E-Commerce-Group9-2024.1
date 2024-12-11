@@ -20,7 +20,7 @@ function Popular({ category }) {
 
   useEffect(() => {
     axios
-      .get(`https://e-commerce-zzfe.onrender.com/product/popular/${category}`)
+      .get(`https://e-commerce-group9-2024-1.onrender.com/product/popular/${category}`)
       .then((res) => setPopularProducts(res.data));
 
     switch (category) {
@@ -125,7 +125,7 @@ function Popular({ category }) {
                         <Item
                           id={product.id}
                           name={product.name}
-                          image={product.images[0]}
+                          image={product.images[0].replace(/http:\/\/localhost:4000/g, 'https://e-commerce-group9-2024-1.onrender.com')}
                           new_price={product.new_price}
                           old_price={product.old_price}
                         />

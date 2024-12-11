@@ -14,7 +14,7 @@ function Order() {
     const navigate = useNavigate();
 
     const fetchAllOrders = async () => {
-        const response = await axios.post('https://e-commerce-zzfe.onrender.com/order/get', {
+        const response = await axios.post('https://e-commerce-group9-2024-1.onrender.com/order/get', {
             status: status
         }, {
             headers: {
@@ -46,7 +46,7 @@ function Order() {
     const handleCheckout = async (order) => {
         try {    
             if (order.payment_modal === 'VNPAY') {
-              const response = await axios.post('https://e-commerce-zzfe.onrender.com/pay/vnpay/create_payment_url', {
+              const response = await axios.post('https://e-commerce-group9-2024-1.onrender.com/pay/vnpay/create_payment_url', {
                 orderId: order._id,
                 amount: order.total,
                 orderType: 110000
